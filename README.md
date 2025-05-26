@@ -84,17 +84,14 @@ Docker e Docker Compose
 Git
 
 ✅ 1. Clone o repositório
-bash
-Copiar
-Editar
+
 git clone https://github.com/CaioLFreitas98/Teste-de-Codifica-o-Back-End.git
 cd Teste-de-Codifica-o-Back-End
 ✅ 2. Configurar variáveis de ambiente
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
 env
-Copiar
-Editar
+
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_DB=lu_estilo
@@ -109,9 +106,7 @@ WHATSAPP_API_URL=https://api.whatsapp.com/send
 WHATSAPP_API_TOKEN=token_de_teste
 ENVIRONMENT=development
 ✅ 3. Rodar com Docker
-bash
-Copiar
-Editar
+
 docker-compose up -d --build
 O serviço FastAPI estará disponível em:
 http://localhost:8000/docs
@@ -121,15 +116,11 @@ http://localhost:8000/docs
 ✅ 4. Rodar localmente sem Docker
 Crie o ambiente virtual:
 
-bash
-Copiar
-Editar
+
 python -m venv sistemaProduto
 Ative:
 
-bash
-Copiar
-Editar
+
 # Windows
 .\sistemaProduto\Scripts\Activate.ps1
 
@@ -137,24 +128,18 @@ Editar
 source sistemaProduto/bin/activate
 Instale as dependências:
 
-bash
-Copiar
-Editar
+
 pip install -r requirements.txt
 pip install email-validator
 Configure .env conforme acima.
 
 Rode as migrações:
 
-bash
-Copiar
-Editar
+
 alembic upgrade head
 Execute a API:
 
-bash
-Copiar
-Editar
+
 uvicorn app.main:app --reload
 Acesse:
 http://localhost:8000/docs
@@ -165,9 +150,7 @@ Ative o ambiente virtual.
 
 Execute:
 
-bash
-Copiar
-Editar
+
 pytest -q
 Todos os testes unitários para autenticação, clientes, produtos, pedidos e integração devem passar.
 
@@ -181,8 +164,7 @@ Refresh Token (/auth/refresh-token) → gera novo token válido.
 Para acessar endpoints protegidos, envie:
 
 makefile
-Copiar
-Editar
+
 Authorization: Bearer <seu_token>
 ✅ Arquitetura do Projeto
 bash
@@ -203,8 +185,7 @@ Editar
 ✅ Exemplos de payloads
 ➡️ Registro de usuário
 json
-Copiar
-Editar
+
 {
   "username": "usuario1",
   "email": "usuario1@email.com",
@@ -213,16 +194,14 @@ Editar
 }
 ➡️ Login de usuário
 json
-Copiar
-Editar
+
 {
   "username": "usuario1",
   "password": "123456"
 }
 ➡️ Criar cliente
 json
-Copiar
-Editar
+
 {
   "name": "João Silva",
   "email": "joao@email.com",
@@ -231,8 +210,7 @@ Editar
 }
 ➡️ Criar produto
 json
-Copiar
-Editar
+
 {
   "description": "Produto Teste",
   "sale_price": 29.99,
@@ -242,8 +220,7 @@ Editar
 }
 ➡️ Criar pedido
 json
-Copiar
-Editar
+
 {
   "client_id": 1,
   "items": [
@@ -270,8 +247,7 @@ GitHub - CaioLFreitas98
 Projeto licenciado sob MIT License.
 
 yaml
-Copiar
-Editar
+
 
 ---
 
