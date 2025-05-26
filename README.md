@@ -168,8 +168,7 @@ makefile
 Authorization: Bearer <seu_token>
 ✅ Arquitetura do Projeto
 bash
-Copiar
-Editar
+
 .
 ├── app
 │   ├── api            # Endpoints da API
